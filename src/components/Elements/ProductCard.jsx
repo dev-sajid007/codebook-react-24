@@ -5,8 +5,8 @@ import { useCart } from "../../contexts/CartContext";
 
 const ProductCard = ({ product }) => {
   const [isCart, setIsCart] = useState(false);
-  const { id, name, overview, poster, price, rating, best_seller } = product;
   const { addToCart, cartList, removeFromCart } = useCart();
+  const { id, name, overview, poster, price, rating, best_seller } = product;
 
   useEffect(() => {
     const productInCart = cartList.find((item) => item.id === id);
